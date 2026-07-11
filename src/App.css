@@ -1,0 +1,47 @@
+/* App.css — Anand */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fb-blue:       #1877F2;
+  --fb-blue-dark:  #166FE5;
+  --fb-green:      #42B72A;
+  --bg-gray:       #F0F2F5;
+  --white:         #FFFFFF;
+  --text-dark:     #050505;
+  --text-gray:     #65676B;
+  --border:        #CED0D4;
+  --hover-gray:    #F2F2F2;
+  --card-shadow:   0 1px 2px rgba(0,0,0,0.2);
+  --border-radius: 8px;
+  --navbar-height: 60px;
+  --sidebar-width: 280px;
+  --font:          'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-gray);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bg-gray:    #18191A;
+  --white:      #242526;
+  --text-dark:  #E4E6EB;
+  --text-gray:  #B0B3B8;
+  --border:     #3E4042;
+  --hover-gray: #3A3B3C;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; font-family: var(--font); }
+input { font-family: var(--font); outline: none; border: none; }

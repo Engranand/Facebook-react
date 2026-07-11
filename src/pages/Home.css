@@ -1,0 +1,49 @@
+/* Home.css — Anand */
+
+.home {
+  min-height: 100vh;
+  background: var(--bg-gray);
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+}
+
+/* Left and Right Sidebar */
+.wrapper > aside {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  padding: 8px;
+  position: sticky;
+  top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+}
+
+.wrapper > aside::-webkit-scrollbar { display: none; }
+
+/* Center Feed */
+.wrapper > main {
+  flex: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px 8px;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .wrapper > aside:last-child { display: none; }
+}
+
+@media (max-width: 991px) {
+  .wrapper > aside { display: none; }
+  .wrapper > main { max-width: 100%; }
+}
+
+@media (max-width: 575px) {
+  .wrapper > main { padding: 8px 0; }
+}
