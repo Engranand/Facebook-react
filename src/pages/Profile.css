@@ -1,0 +1,126 @@
+.profilePage {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.profileContainer {
+  background-color: white;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.coverPhoto {
+  height: 350px;
+  background: linear-gradient(
+    to bottom,
+    #d8dadf,
+    #8a8d91
+  );
+  border-radius: 0 0 10px 10px;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  padding: 0 35px 20px;
+  position: relative;
+}
+
+.profileAvatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #1877f2;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 70px;
+  font-weight: bold;
+
+  border: 5px solid white;
+  margin-top: -35px;
+}
+
+.profileDetails {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.profileDetails h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.profileDetails p {
+  color: #65676b;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.profileActions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+
+.profileActions button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addStoryButton {
+  background-color: #1877f2;
+  color: white;
+}
+
+.addStoryButton:hover {
+  background-color: #166fe5;
+}
+
+.editProfileButton {
+  background-color: #e4e6eb;
+  color: #050505;
+}
+
+.editProfileButton:hover {
+  background-color: #d8dadf;
+}
+
+.profileContainer hr {
+  border: none;
+  border-top: 1px solid #ced0d4;
+  margin: 0 35px;
+}
+
+.profileNavigation {
+  display: flex;
+  gap: 5px;
+  padding: 4px 35px 0;
+}
+
+.profileNavigation span {
+  padding: 16px;
+  color: #65676b;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.profileNavigation span:hover {
+  background-color: #f0f2f5;
+}
+
+.profileNavigation span:first-child {
+  color: #1877f2;
+  border-bottom: 3px solid #1877f2;
+  border-radius: 0;
+}
