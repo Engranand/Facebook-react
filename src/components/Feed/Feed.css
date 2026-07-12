@@ -1,0 +1,200 @@
+:root {
+  --feed-bg: #ffffff;
+  --feed-border: #e5e7eb;
+  --feed-muted: #65676b;
+  --feed-accent: #1877f2;
+  --feed-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --feed-gray: #f0f2f5;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--feed-bg);
+  border: 1px solid var(--feed-border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: var(--feed-shadow);
+}
+
+.feedSearchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--feed-muted);
+  background: var(--feed-gray);
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.feedButton {
+  border: none;
+  background: var(--feed-accent);
+  color: white;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.storyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--feed-bg);
+  border: 1px solid var(--feed-border);
+  border-radius: 14px;
+  padding: 12px 8px;
+  box-shadow: var(--feed-shadow);
+}
+
+.storyCard.active .storyAvatar {
+  border-color: var(--feed-accent);
+}
+
+.storyAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #f43f5e, #3b82f6);
+  border: 3px solid transparent;
+}
+
+.storyName {
+  font-size: 0.9rem;
+  color: var(--feed-muted);
+}
+
+.feedPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.postCard {
+  background: var(--feed-bg);
+  border: 1px solid var(--feed-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--feed-shadow);
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.postUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postUser h4 {
+  margin: 0;
+  color: #111827;
+}
+
+.postUser p {
+  margin: 2px 0 0;
+  color: var(--feed-muted);
+  font-size: 0.9rem;
+}
+
+.postAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.postMenu {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: var(--feed-muted);
+  cursor: pointer;
+}
+
+.postContent {
+  color: #1f2937;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.postStats {
+  display: flex;
+  gap: 14px;
+  color: var(--feed-muted);
+  font-size: 0.95rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--feed-border);
+}
+
+.postActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.postActions button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--feed-muted);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.postActions button:hover {
+  background: var(--feed-gray);
+}
+
+@media (max-width: 767px) {
+  .stories {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .feedTop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .postActions {
+    flex-direction: column;
+  }
+}
